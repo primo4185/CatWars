@@ -1,11 +1,40 @@
 package com.company;
 
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class Cat {
+
+    static List<String> catNames = Arrays.asList(
+            "Ashes",
+            "Tiger",
+            "Puss",
+            "Smokey",
+            "Misty",
+            "Kitty",
+            "Oscar",
+            "Felix",
+            "Shashlik",
+            "Kebab"
+    );
+
+    static List<String> specials = Arrays.asList(
+            "Fireball",
+            "Ignite",
+            "Exhaust",
+            "Kiss",
+            "Lightning",
+            "Thunderbolt",
+            "Firestorm",
+            "Bloodlust",
+            "Wildcall",
+            "Stormpunch"
+    );
+
+
     public int health;
     public int damage;
     public int defence;
@@ -13,7 +42,9 @@ public class Cat {
     public String special = new String("");
 
 
-    Cat(ArrayList<String> catNames, ArrayList<String> specials) {
+
+
+    Cat() {
         Random random = new Random();
         this.health = 50 + random.nextInt(100);
         this.damage = 10 + random.nextInt(10);
@@ -78,3 +109,5 @@ public class Cat {
        System.out.println("Health: " + cat.health + "\n");
     }
 }
+
+
