@@ -1,4 +1,4 @@
-package com.company;
+package ru.mkots;
 
 import java.util.Scanner;
 
@@ -8,14 +8,13 @@ public class Main {
         System.out.println("Sos");
 
         Scanner scanner = new Scanner(System.in);
-        Cat jugde = new Cat();
+        PlayGround playGround = new PlayGround();
         for (int i = 0; i < 10; i++) {
             Cat cat1 = new Cat();
             Cat cat2 = new Cat();
             scanner.nextLine();
             try {
-                jugde.fight(cat1, cat2, scanner
-                );
+                playGround.fight(cat1, cat2);
             } catch (InterruptedException ex) {
                 Thread.currentThread().interrupt();
             }
